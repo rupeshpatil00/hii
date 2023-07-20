@@ -1,0 +1,27 @@
+echo "dir"
+echo "date"
+echo "del"
+echo "cls"
+echo "md"
+echo "exit"
+while [ 1 ]
+do
+echo -e "c:\>"
+read n
+case $n in
+dir) ls ;;
+date) date ;;
+del)echo -e "\n\n enter the name which you want to delete"
+read fn
+rm -i $fn
+ls ;;
+cls) clear ;;
+md) echo -e "\n\n give new directory name"
+read d
+mkdir $d
+ls ;;
+exit)exit ;;
+*) echo entered wrong command
+esac
+done
+

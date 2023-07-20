@@ -1,0 +1,18 @@
+clear
+echo enter the string
+read str
+l=`echo $str|wc -c`
+while [ $l -gt 0 ]
+do
+t=`echo $str | cut -c$l`
+rev=`echo $rev$t`
+echo $rev
+l=`expr $l - 1`
+done
+echo reverse string is $rev
+if [ $str == $rev ]
+then
+echo string is palindrom
+else
+echo string is not palindrom
+fi

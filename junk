@@ -1,0 +1,14 @@
+clear 
+for i in *
+do
+if[ -f $i ]
+then
+s=`ls -1 $i | cut -d " " -f5`
+if[$s -eq 0 ]
+then
+echo "$i is junk file"
+rm -i $i
+fi
+fi
+done
+

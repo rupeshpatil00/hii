@@ -1,0 +1,9 @@
+echo "enter any number"
+read n
+r=`expr $n % 11`
+if[ $r -eq 0 ]
+then
+echo $n "is divisible by 11"
+else
+echo $n "is not divisible by 11"
+fi
